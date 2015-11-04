@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		15B0D4A7364C4D608C78FF1E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AFF61E367119964AE380331 /* Pods.framework */; };
+		43E71F5EEA0875F0F56DA3F0 /* Pods_SpringStateMachine_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA4FBAFB5DF3C36535A3F73 /* Pods_SpringStateMachine_iOSTests.framework */; };
+		730E27C21BEA17B100F53ECF /* CoinEntryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E27C11BEA17B100F53ECF /* CoinEntryViewModelTest.swift */; settings = {ASSET_TAGS = (); }; };
 		73F47E9C1BE8C7780031FC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F47E9B1BE8C7780031FC48 /* AppDelegate.swift */; };
 		73F47E9E1BE8C7780031FC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F47E9D1BE8C7780031FC48 /* ViewController.swift */; };
 		73F47EA11BE8C7780031FC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F47E9F1BE8C7780031FC48 /* Main.storyboard */; };
 		73F47EA31BE8C7780031FC48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73F47EA21BE8C7780031FC48 /* Assets.xcassets */; };
 		73F47EA61BE8C7780031FC48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F47EA41BE8C7780031FC48 /* LaunchScreen.storyboard */; };
 		73F47EB11BE8C7780031FC48 /* SpringStateMachine_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F47EB01BE8C7780031FC48 /* SpringStateMachine_iOSTests.swift */; };
+		B0669543603D5FCBD365C4E4 /* CoinEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06696B6BC0BF5C00C298F79 /* CoinEntryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FA4FBAFB5DF3C36535A3F73 /* Pods_SpringStateMachine_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpringStateMachine_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B976E21FEF50FDA4128DA9 /* Pods-SpringStateMachine-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringStateMachine-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpringStateMachine-iOSTests/Pods-SpringStateMachine-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		730E27C11BEA17B100F53ECF /* CoinEntryViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinEntryViewModelTest.swift; sourceTree = "<group>"; };
 		73F47E981BE8C7780031FC48 /* SpringStateMachine-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpringStateMachine-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F47E9B1BE8C7780031FC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F47E9D1BE8C7780031FC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +45,8 @@
 		73F47EB21BE8C7780031FC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AFF61E367119964AE380331 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D79B274883CAB3E2F09760 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B06696B6BC0BF5C00C298F79 /* CoinEntryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinEntryViewModel.swift; sourceTree = "<group>"; };
+		B9BC2ADE1EA72712F2089301 /* Pods-SpringStateMachine-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpringStateMachine-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpringStateMachine-iOSTests/Pods-SpringStateMachine-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		F7274ECA381AB680D30DA8C5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43E71F5EEA0875F0F56DA3F0 /* Pods_SpringStateMachine_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				7AFF61E367119964AE380331 /* Pods.framework */,
+				3FA4FBAFB5DF3C36535A3F73 /* Pods_SpringStateMachine_iOSTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,6 +108,7 @@
 				73F47EA21BE8C7780031FC48 /* Assets.xcassets */,
 				73F47EA41BE8C7780031FC48 /* LaunchScreen.storyboard */,
 				73F47EA71BE8C7780031FC48 /* Info.plist */,
+				B06696B6BC0BF5C00C298F79 /* CoinEntryViewModel.swift */,
 			);
 			path = "SpringStateMachine-iOS";
 			sourceTree = "<group>";
@@ -107,6 +118,7 @@
 			children = (
 				73F47EB01BE8C7780031FC48 /* SpringStateMachine_iOSTests.swift */,
 				73F47EB21BE8C7780031FC48 /* Info.plist */,
+				730E27C11BEA17B100F53ECF /* CoinEntryViewModelTest.swift */,
 			);
 			path = "SpringStateMachine-iOSTests";
 			sourceTree = "<group>";
@@ -116,6 +128,8 @@
 			children = (
 				F7274ECA381AB680D30DA8C5 /* Pods.debug.xcconfig */,
 				90D79B274883CAB3E2F09760 /* Pods.release.xcconfig */,
+				40B976E21FEF50FDA4128DA9 /* Pods-SpringStateMachine-iOSTests.debug.xcconfig */,
+				B9BC2ADE1EA72712F2089301 /* Pods-SpringStateMachine-iOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -147,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73F47EB81BE8C7780031FC48 /* Build configuration list for PBXNativeTarget "SpringStateMachine-iOSTests" */;
 			buildPhases = (
+				A96C1E25E7A58E2B4EE84447 /* Check Pods Manifest.lock */,
 				73F47EA81BE8C7780031FC48 /* Sources */,
 				73F47EA91BE8C7780031FC48 /* Frameworks */,
 				73F47EAA1BE8C7780031FC48 /* Resources */,
+				DB5B261E5898428436BB6A35 /* Embed Pods Frameworks */,
+				C8ACC13424A660B11BF64B4A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +283,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A96C1E25E7A58E2B4EE84447 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C8ACC13424A660B11BF64B4A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpringStateMachine-iOSTests/Pods-SpringStateMachine-iOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB5B261E5898428436BB6A35 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpringStateMachine-iOSTests/Pods-SpringStateMachine-iOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -275,6 +337,7 @@
 			files = (
 				73F47E9E1BE8C7780031FC48 /* ViewController.swift in Sources */,
 				73F47E9C1BE8C7780031FC48 /* AppDelegate.swift in Sources */,
+				B0669543603D5FCBD365C4E4 /* CoinEntryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				730E27C21BEA17B100F53ECF /* CoinEntryViewModelTest.swift in Sources */,
 				73F47EB11BE8C7780031FC48 /* SpringStateMachine_iOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +489,7 @@
 		};
 		73F47EB91BE8C7780031FC48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40B976E21FEF50FDA4128DA9 /* Pods-SpringStateMachine-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SpringStateMachine-iOSTests/Info.plist";
@@ -437,6 +502,7 @@
 		};
 		73F47EBA1BE8C7780031FC48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9BC2ADE1EA72712F2089301 /* Pods-SpringStateMachine-iOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "SpringStateMachine-iOSTests/Info.plist";
