@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 //    private let viewModel: CoinEntryViewModel;
 //    private let coinEntryService = CoinEntryService()
 
-    
+
     required init?(coder aDecoder: NSCoder) {
 //        viewModel = CoinEntryViewModel(coinEntryService: coinEntryService))
 
@@ -37,9 +37,7 @@ class ViewController: UIViewController {
 
         oneDollarButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext {
             _ in
-            self.executeCoinEnteredCommand().execute(nil).subscribeNext({
-                print("******* MEH ******")
-            })
+            print("******* MEH ******")
         }
 
     }
