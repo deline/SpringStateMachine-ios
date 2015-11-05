@@ -14,11 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var fiftyCentButton: UIButton!
     @IBOutlet weak var oneDollarButton: UIButton!
 
-    private let viewModel: CoinEntryViewModel;
+//    private let viewModel: CoinEntryViewModel;
+//    private let coinEntryService = CoinEntryService()
 
     
     required init?(coder aDecoder: NSCoder) {
-        viewModel = CoinEntryViewModel()
+//        viewModel = CoinEntryViewModel(coinEntryService: coinEntryService))
 
         super.init(coder: aDecoder)
     }
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
         oneDollarButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext {
             _ in
             self.executeCoinEnteredCommand().execute(nil).subscribeNext({
-                print("KICK ME \($0)")
+                print("******* MEH ******")
             })
         }
 
