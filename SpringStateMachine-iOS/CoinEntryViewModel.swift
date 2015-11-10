@@ -16,7 +16,6 @@ class CoinEntryViewModel: NSObject {
     private lazy var coinEnteredSignal: RACSignal = self.initiateCoinEnteredSignal();
     private let coinEntryService: CoinEntryService
 
-
     init(coinEntryService: CoinEntryService) {
         self.coinEntryService = coinEntryService;
         super.init()
@@ -48,9 +47,12 @@ class CoinEntryViewModel: NSObject {
         return RACSignal.createSignal({
             (subscriber: RACSubscriber!) -> RACDisposable! in
 
-            let result = self.coinEntryService.coinEntered(self.coinEnteredValue.value)
-            subscriber.sendNext(result)
-            subscriber.sendCompleted()
+            let result = self.coinEntryService.coinEntered(self.coinEnteredValue.value) {
+                _ in
+                print("ARGHHHHHH")
+            }
+//            subscriber.sendNext(result)
+//            subscriber.sendCompleted()
 
             return nil
         })

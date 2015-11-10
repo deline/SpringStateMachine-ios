@@ -1,6 +1,21 @@
 PODS:
   - Alamofire (3.1.1)
   - Nimble (3.0.0)
+  - OHHTTPStubs (4.6.0):
+    - OHHTTPStubs/Default (= 4.6.0)
+  - OHHTTPStubs/Core (4.6.0)
+  - OHHTTPStubs/Default (4.6.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (4.6.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (4.6.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (4.6.0)
+  - OHHTTPStubs/Swift (4.6.0):
+    - OHHTTPStubs/Core
   - ReactiveCocoa (3.0.0-swift2):
     - ReactiveCocoa/UI (= 3.0.0-swift2)
     - Result (~> 0.6-beta.1)
@@ -13,16 +28,22 @@ PODS:
     - ReactiveCocoa/Core
     - Result (~> 0.6-beta.1)
   - Result (0.6.0-beta.6)
+  - SwiftyJSON (2.3.1)
 
 DEPENDENCIES:
   - Alamofire (~> 3.0)
   - Nimble (~> 3.0.0)
+  - OHHTTPStubs (~> 4.6)
+  - OHHTTPStubs/Swift (~> 4.6)
   - ReactiveCocoa (= 3.0.0-swift2)
+  - SwiftyJSON (~> 2.3)
 
 SPEC CHECKSUMS:
   Alamofire: 9b0a7188b961a03914a99304488bd226b0e46c0e
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  OHHTTPStubs: cb1aefbbeb4de4e741644455d4b945538e5248a2
   ReactiveCocoa: b17191e37a655ff35d095040a203ecd9dd04e8bd
   Result: dc390d0b58f9ec43fcd536f1ebdd130803cc6cbc
+  SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
 
 COCOAPODS: 0.39.0
