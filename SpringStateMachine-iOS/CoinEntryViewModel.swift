@@ -9,7 +9,7 @@ import ReactiveCocoa
 class CoinEntryViewModel: NSObject {
 
     let coinEnteredValue = MutableProperty<NSDecimalNumber>(0)
-    
+
     var amountEnteredSoFar = NSDecimalNumber.zero()
 
     private lazy var coinEnteredCommand: RACCommand = self.initiateCoinEnteredCommand()
@@ -22,15 +22,15 @@ class CoinEntryViewModel: NSObject {
         initialize();
 
     }
-    
+
     private func initialize() {
         self.coinEnteredCommand.executionSignals.switchToLatest().deliverOnMainThread().subscribeNext {
             (next: AnyObject!) -> () in
             let result = next as! CoinEnteredResult
             self.amountEnteredSoFar = result.amountEnteredSoFar
         }
-        
-        coinEnteredValue.producer.start{
+
+        coinEnteredValue.producer.start {
             _ in
             self.coinEnteredCommand.execute(nil)
         }
@@ -38,7 +38,7 @@ class CoinEntryViewModel: NSObject {
 
     func initiateCoinEnteredCommand() -> RACCommand {
         return RACCommand(signalBlock: {
-            (any:AnyObject!) -> RACSignal! in
+            (any: AnyObject!) -> RACSignal! in
             return self.coinEnteredSignal
         })
     }
@@ -47,12 +47,11 @@ class CoinEntryViewModel: NSObject {
         return RACSignal.createSignal({
             (subscriber: RACSubscriber!) -> RACDisposable! in
 
-            let result = self.coinEntryService.coinEntered(self.coinEnteredValue.value) {
-                _ in
-                print("ARGHHHHHH")
+            self.coinEntryService.coinEntered(self.coinEnteredValue.value) {
+                result in
+                subscriber.sendNext(result)
+                subscriber.sendCompleted()
             }
-//            subscriber.sendNext(result)
-//            subscriber.sendCompleted()
 
             return nil
         })

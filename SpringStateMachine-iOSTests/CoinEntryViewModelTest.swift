@@ -46,10 +46,7 @@ class CoinEntryViewModelTest: XCTestCase {
 
         override func coinEntered(coinValue: NSDecimalNumber, completion: ((result: CoinEnteredResult) -> Void)) {
             self.amountEnteredSoFar = self.amountEnteredSoFar.decimalNumberByAdding(coinValue)
-//            return CoinEnteredResult(amountEnteredSoFar: self.amountEnteredSoFar, enoughFundsEntered: self.enoughFundsEntered())
-
-                completion(result: CoinEnteredResult(amountEnteredSoFar: self.amountEnteredSoFar, enoughFundsEntered: self.enoughFundsEntered()))
-            
+            completion(result: CoinEnteredResult(amountEnteredSoFar: self.amountEnteredSoFar, enoughFundsEntered: self.enoughFundsEntered()))            
         }
 
         func enoughFundsEntered() -> Bool {

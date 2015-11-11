@@ -190,6 +190,8 @@
 		73F47E901BE8C7780031FC48 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Deline Neo";
 				TargetAttributes = {
