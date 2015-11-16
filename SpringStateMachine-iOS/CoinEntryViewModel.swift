@@ -8,7 +8,7 @@ import ReactiveCocoa
 
 class CoinEntryViewModel: NSObject {
 
-    let coinEnteredValue = MutableProperty<NSDecimalNumber>(0)
+    var coinEnteredValue = MutableProperty<NSDecimalNumber>(0)
 
     var amountEnteredSoFar = NSDecimalNumber.zero()
 
@@ -24,11 +24,11 @@ class CoinEntryViewModel: NSObject {
     }
 
     private func initialize() {
-        self.coinEnteredCommand.executionSignals.switchToLatest().deliverOnMainThread().subscribeNext {
-            (next: AnyObject!) -> () in
-            let result = next as! CoinEnteredResult
-            self.amountEnteredSoFar = result.amountEnteredSoFar
-        }
+//        self.coinEnteredCommand.executionSignals.switchToLatest().deliverOnMainThread().subscribeNext {
+//            (next: AnyObject!) -> () in
+//            let result = next as! CoinEnteredResult
+//            self.amountEnteredSoFar = result.amountEnteredSoFar
+//        }
 
         coinEnteredValue.producer.start {
             _ in

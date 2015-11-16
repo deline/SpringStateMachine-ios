@@ -9,20 +9,22 @@ import SwiftyJSON
 
 
 class CoinEntryService {
-    func coinEntered(coinValue: NSDecimalNumber, completion: ((result: CoinEnteredResult?) -> Void)) {
-        
-        Alamofire.request(.GET, "http://localhost:8080").responseJSON {
+    func coinEntered(coinValue: NSDecimalNumber, completion: ((result:CoinEnteredResult?) -> Void)) {
+
+        Alamofire.request(.PUT, "http://localhost:8080/coinEntryService/coinEntered", parameters: ["coinValue": 1.5], encoding: .JSON).responseJSON {
             response in
+            
+            debugPrint(response)
 
             var coinEnteredResult: CoinEnteredResult?
             if let JSON = response.result.value {
-                
-                let amountEnteredSoFar = NSDecimalNumber(double: JSON.valueForKey("amountEnteredSoFar") as! Double)
+
+                let amountEnteredSoFar = NSDecimalNumber(string: JSON.valueForKey("amountEnteredSoFar") as? String)
                 let enoughFundsEntered = JSON.valueForKey("enoughFundsEntered") as! Bool
-                
+
                 coinEnteredResult = CoinEnteredResult(
-                    amountEnteredSoFar: amountEnteredSoFar,
-                    enoughFundsEntered: enoughFundsEntered)
+                amountEnteredSoFar: amountEnteredSoFar,
+                        enoughFundsEntered: enoughFundsEntered)
             }
             completion(result: coinEnteredResult)
         }
