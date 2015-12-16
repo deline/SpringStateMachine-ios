@@ -11,10 +11,8 @@ import SwiftyJSON
 class CoinEntryService {
     func coinEntered(coinValue: NSDecimalNumber, completion: ((result:CoinEnteredResult?) -> Void)) {
 
-        Alamofire.request(.PUT, "http://localhost:8080/coinEntryService/coinEntered", parameters: ["coinValue": 1.5], encoding: .JSON).responseJSON {
+        Alamofire.request(.PUT, "http://localhost:8080/coinEntryService/coinEntered", parameters: ["coinValue": coinValue.doubleValue], encoding: .JSON).responseJSON {
             response in
-            
-            debugPrint(response)
 
             var coinEnteredResult: CoinEnteredResult?
             if let JSON = response.result.value {

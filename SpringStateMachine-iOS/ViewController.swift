@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var fiftyCentButton: UIButton!
     @IBOutlet weak var oneDollarButton: UIButton!
 
+    static private let fiftyCents = NSDecimalNumber(double: 0.5)
+    static private let oneDollar = NSDecimalNumber.one()
+
     private let viewModel: CoinEntryViewModel
 
     required init?(coder aDecoder: NSCoder) {
@@ -25,46 +28,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-
         fiftyCentButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext {
-            coinEntered in
-            print("******* HEY ******: \(coinEntered)")
-            
-//            viewModel.coinEnteredValue = NSDecimalNumber.one()
-            
+            _ in
+            self.viewModel.coinEnteredValue.value = ViewController.fiftyCents
         }
 
         oneDollarButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext {
             _ in
-            print("******* MEH ******")
+            self.viewModel.coinEnteredValue.value = ViewController.oneDollar
         }
-
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    private func executeCoinEnteredCommand() -> RACCommand {
-        return RACCommand(signalBlock: {
-            _ -> RACSignal! in
-            return self.coinEnteredSignal()
-        })
-    }
-
-
-    private func coinEnteredSignal() -> RACSignal {
-        return RACSignal.createSignal({
-            (subscriber: RACSubscriber!) -> RACDisposable! in
-            print("*** Go and perform coin entry business ***")
-
-            subscriber.sendNext("BOB was here")
-            subscriber.sendCompleted()
-            return nil
-        })
-    }
-
-
 }
 
