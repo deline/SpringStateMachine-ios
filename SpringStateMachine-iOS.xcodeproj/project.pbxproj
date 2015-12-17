@@ -11,6 +11,7 @@
 		43E71F5EEA0875F0F56DA3F0 /* Pods_SpringStateMachine_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA4FBAFB5DF3C36535A3F73 /* Pods_SpringStateMachine_iOSTests.framework */; };
 		730E27C21BEA17B100F53ECF /* CoinEntryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E27C11BEA17B100F53ECF /* CoinEntryViewModelTest.swift */; };
 		730E27C41BEB819D00F53ECF /* CoinEntryServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E27C31BEB819D00F53ECF /* CoinEntryServiceTest.swift */; };
+		735CCBFB1C22B197009AE5BD /* PactRecorderProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735CCBFA1C22B197009AE5BD /* PactRecorderProtcol.swift */; };
 		73F47E9C1BE8C7780031FC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F47E9B1BE8C7780031FC48 /* AppDelegate.swift */; };
 		73F47E9E1BE8C7780031FC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F47E9D1BE8C7780031FC48 /* ViewController.swift */; };
 		73F47EA11BE8C7780031FC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F47E9F1BE8C7780031FC48 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		730E27C11BEA17B100F53ECF /* CoinEntryViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinEntryViewModelTest.swift; sourceTree = "<group>"; };
 		730E27C31BEB819D00F53ECF /* CoinEntryServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinEntryServiceTest.swift; sourceTree = "<group>"; };
 		735CCBF61C218CCB009AE5BD /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
+		735CCBFA1C22B197009AE5BD /* PactRecorderProtcol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PactRecorderProtcol.swift; sourceTree = "<group>"; };
 		73F47E981BE8C7780031FC48 /* SpringStateMachine-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpringStateMachine-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F47E9B1BE8C7780031FC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F47E9D1BE8C7780031FC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				73F47EB21BE8C7780031FC48 /* Info.plist */,
 				730E27C11BEA17B100F53ECF /* CoinEntryViewModelTest.swift */,
 				730E27C31BEB819D00F53ECF /* CoinEntryServiceTest.swift */,
+				735CCBFA1C22B197009AE5BD /* PactRecorderProtcol.swift */,
 			);
 			path = "SpringStateMachine-iOSTests";
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				730E27C21BEA17B100F53ECF /* CoinEntryViewModelTest.swift in Sources */,
+				735CCBFB1C22B197009AE5BD /* PactRecorderProtcol.swift in Sources */,
 				730E27C41BEB819D00F53ECF /* CoinEntryServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

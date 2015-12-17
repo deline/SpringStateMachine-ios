@@ -32,8 +32,11 @@ class CoinEntryViewModel: NSObject {
             debugPrint(result?.amountEnteredSoFar)
             debugPrint(result?.enoughFundsEntered)
             
-            self.amountEnteredSoFar = result!.amountEnteredSoFar
-            self.enoughFundsEntered = result!.enoughFundsEntered
+            if (result != nil) {
+                self.amountEnteredSoFar = result!.amountEnteredSoFar
+                self.enoughFundsEntered = result!.enoughFundsEntered
+            }
+
         }
 
         coinEnteredValue.producer.start {

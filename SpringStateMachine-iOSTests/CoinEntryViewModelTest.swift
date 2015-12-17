@@ -20,6 +20,7 @@ class CoinEntryViewModelTest: XCTestCase {
         super.setUp()
 
         viewModel = CoinEntryViewModel(coinEntryService: coinEntryService)
+        
     }
 
     override func tearDown() {

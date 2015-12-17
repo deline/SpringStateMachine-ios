@@ -33,6 +33,8 @@ class CoinEntryServiceTest: XCTestCase {
         service.coinEntered(NSDecimalNumber.one()) {
             result in
             coinEnteredResult = result
+            print("********\(coinEnteredResult?.amountEnteredSoFar)")
+            print("********\(coinEnteredResult?.enoughFundsEntered)")
         }
         
         expect(coinEnteredResult).toEventuallyNot(beNil())
