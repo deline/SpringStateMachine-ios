@@ -17,7 +17,7 @@ class CoinEntryService {
             var coinEnteredResult: CoinEnteredResult?
             if let JSON = response.result.value {
 
-                let amountEnteredSoFar = NSDecimalNumber(double: JSON.valueForKey("amountEnteredSoFar") as! Double)
+                let amountEnteredSoFar = NSDecimalNumber(string: JSON.valueForKey("amountEnteredSoFar") as? String)
                 let enoughFundsEntered = JSON.valueForKey("enoughFundsEntered") as! Bool
 
                 coinEnteredResult = CoinEnteredResult(

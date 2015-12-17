@@ -22,7 +22,7 @@ class CoinEntryServiceTest: XCTestCase {
     
     func testSubmitsAndProcessesResultFromRemoteService() {
         let service = CoinEntryService()
-        let expectedResponse: JSON =  ["amountEnteredSoFar":NSDecimalNumber(double: 2.50), "enoughFundsEntered":false]
+        let expectedResponse: JSON =  ["amountEnteredSoFar":"2.50", "enoughFundsEntered":false]
 
         stub(isHost("localhost")) {
             _ in
