@@ -11,6 +11,7 @@ class CoinEntryViewModel: NSObject {
     let coinEnteredValue = MutableProperty<NSDecimalNumber>(0)
 
     var amountEnteredSoFar = NSDecimalNumber.zero()
+    let amountOutstanding = MutableProperty<NSDecimalNumber>(0)
     var enoughFundsEntered = false
 
     private lazy var coinEnteredCommand: RACCommand = self.initiateCoinEnteredCommand()
@@ -29,11 +30,9 @@ class CoinEntryViewModel: NSObject {
             (next: AnyObject!) -> () in
             let result = next as? CoinEnteredResult
             
-            debugPrint(result?.amountEnteredSoFar)
-            debugPrint(result?.enoughFundsEntered)
-            
             if (result != nil) {
                 self.amountEnteredSoFar = result!.amountEnteredSoFar
+                self.amountOutstanding.value = result!.amountOutstanding
                 self.enoughFundsEntered = result!.enoughFundsEntered
             }
 

@@ -7,10 +7,12 @@ import Foundation
 
 class CoinEnteredResult {
     let amountEnteredSoFar: NSDecimalNumber
+    let amountOutstanding: NSDecimalNumber
     let enoughFundsEntered: Bool
 
-    init(amountEnteredSoFar: NSDecimalNumber, enoughFundsEntered: Bool) {
+    init(amountEnteredSoFar: NSDecimalNumber, amountOutstanding: NSDecimalNumber, enoughFundsEntered: Bool) {
         self.amountEnteredSoFar = amountEnteredSoFar;
+        self.amountOutstanding = amountOutstanding;
         self.enoughFundsEntered = enoughFundsEntered;
     }
 }
